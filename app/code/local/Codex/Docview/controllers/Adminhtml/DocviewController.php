@@ -2,8 +2,15 @@
 
 class Codex_Docview_Adminhtml_DocviewController extends Mage_Adminhtml_Controller_Action
 {
+    protected function _validateFormKey()
+    {
+        return true;
+    }
 
-
+    protected function _validateSecretKey()
+    {
+       return true;
+    }
 
     public function indexAction()
     {
