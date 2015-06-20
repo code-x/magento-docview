@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Codex_Docview>
+            <version>1.0.0</version>
+        </Codex_Docview>
+    </modules>
+
+    <global>
+        <models>
+            <codex_docview>
+                <class>Codex_Docview_Model</class>
+            </codex_docview>
+        </models>
+
+        <blocks>
+            <codex_docview>
+                <class>Codex_Docview_Block</class>
+            </codex_docview>
+        </blocks>
+
+        <helpers>
+            <codex_docview>
+                <class>Codex_Docview_Helper</class>
+            </codex_docview>
+        </helpers>
+    </global>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <codex_docview>
+                    <file>codex_docview.xml</file>
+                </codex_docview>
+            </updates>
+        </layout>
+    </adminhtml>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <codex_docview before="Mage_Adminhtml">Codex_Docview_Adminhtml</codex_docview>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
