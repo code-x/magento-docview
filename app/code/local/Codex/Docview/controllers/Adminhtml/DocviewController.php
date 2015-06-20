@@ -2,6 +2,9 @@
 
 class Codex_Docview_Adminhtml_DocviewController extends Mage_Adminhtml_Controller_Action
 {
+
+
+
     public function indexAction()
     {
         $docHelper = Mage::helper('codex_docview');

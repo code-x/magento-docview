@@ -37,6 +37,17 @@
     </adminhtml>
 
     <admin>
+
+        <docview>
+            <Codex_Docview>
+                <acl>
+                    <codex_base>
+                        <docview/>
+                    </codex_base>
+                </acl>
+            </Codex_Docview>
+        </docview>
+
         <routers>
             <adminhtml>
                 <args>

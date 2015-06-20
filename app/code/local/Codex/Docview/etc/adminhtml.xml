@@ -19,9 +19,9 @@
                 <children>
                     <codex_base>
                         <children>
-                            <codex_ordergrid translate="title">
+                            <codex_docview translate="title">
                                 <title>Dokumentation</title>
-                            </codex_ordergrid>
+                            </codex_docview>
                         </children>
                     </codex_base>
                 </children>
