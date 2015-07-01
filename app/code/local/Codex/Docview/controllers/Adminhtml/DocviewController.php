@@ -29,10 +29,29 @@ class Codex_Docview_Adminhtml_DocviewController extends Mage_Adminhtml_Controlle
         $this->renderLayout();
     }
 
+    public function devAction()
+    {
+        $docHelper = Mage::helper('codex_docview');
+        $docs = $docHelper->getModuleDocs('dev');
+
+        $this->loadLayout();
+
+        foreach( $docs AS $doc ) {
+            $block = $this->getLayout()->createBlock('codex_docview/adminhtml_parsedown');
+            $block->setFile($doc['file']);
+            $block->setModule($doc['module']);
+            $block->setSubdir($doc['subdir']);
+            $this->_addContent( $block );
+        }
+
+        $this->renderLayout();
+    }
+
     public function viewAction()
     {
         $file = $this->getRequest()->getParam('file');
         $module = $this->getRequest()->getParam('module');
+        $subdir = $this->getRequest()->getParam('subdir');
 
         $ext = pathinfo($file, PATHINFO_EXTENSION);
 
@@ -42,6 +61,7 @@ class Codex_Docview_Adminhtml_DocviewController extends Mage_Adminhtml_Controlle
             $block = $this->getLayout()->createBlock('codex_docview/adminhtml_parsedown');
             $block->setFile($file);
             $block->setModule($module);
+            $block->setSubdir($subdir);
 
             $this->_addContent( $block );
             $this->renderLayout();
