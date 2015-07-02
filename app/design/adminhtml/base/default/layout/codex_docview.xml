@@ -16,4 +16,13 @@
             </action>
         </reference>
     </adminhtml_docview_view>
+
+    <adminhtml_docview_dev>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/markdown.css</stylesheet>
+            </action>
+        </reference>
+    </adminhtml_docview_dev>
+
 </layout>
