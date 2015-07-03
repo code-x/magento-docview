@@ -67,7 +67,7 @@ class Codex_Docview_Adminhtml_DocviewController extends Mage_Adminhtml_Controlle
             $this->renderLayout();
         } else {
 
-            $docFile = Mage::helper('codex_docview')->getDocFile($module,$file);
+            $docFile = Mage::helper('codex_docview')->getDocFile($module,$file, $subdir);
             readfile($docFile);
 
         }
