@@ -1,1 +1,0 @@
-app/code/local/Codex/Docview/doc/dev/screenshots.md
