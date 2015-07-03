@@ -5,6 +5,20 @@
         <codex_base>
             <children>
                 <codex_docview translate="title" module="codex_docview">
+                    <sort_order>900</sort_order>
+                    <title>Dokumentation</title>
+                    <action>adminhtml/docview</action>
+                </codex_docview>
+                <codex_docview_dev translate="title" module="codex_docview">
+                    <sort_order>910</sort_order>
+                    <title>Entwickler-Doku</title>
+                    <action>adminhtml/docview/dev</action>
+                </codex_docview_dev>
+            </children>
+        </codex_base>
+        <system>
+            <children>
+                <codex_docview translate="title" module="codex_docview">
                     <sort_order>10</sort_order>
                     <title>Dokumentation</title>
                     <action>adminhtml/docview</action>
@@ -15,7 +29,7 @@
                     <action>adminhtml/docview/dev</action>
                 </codex_docview_dev>
             </children>
-        </codex_base>
+        </system>
     </menu>
 
     <acl>
@@ -28,10 +42,20 @@
                                 <title>Dokumentation</title>
                             </codex_docview>
                             <codex_docview_dev translate="title">
-                                <title>Entwicker-Doku</title>
+                                <title>Entwicker-</title>
                             </codex_docview_dev>
                         </children>
                     </codex_base>
+                    <system>
+                        <children>
+                            <codex_docview translate="title">
+                                <title>Dokumentation</title>
+                            </codex_docview>
+                            <codex_docview_dev translate="title">
+                                <title>Entwicker-Doku</title>
+                            </codex_docview_dev>
+                        </children>
+                    </system>
                 </children>
             </admin>
         </resources>
