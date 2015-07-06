@@ -36,8 +36,14 @@ class Codex_Docview_Helper_Parsedown extends Codex_Docview_Lib_Parsedown
         }
 
         $docFile = Mage::helper('codex_docview')->getDocFile($moduleName, $file, $subdir);
+        $markdown = file_get_contents($docFile);
 
-        return '<div class="markdown">' . $this->parse(file_get_contents($docFile)) . '</div>';
+        /* @var $helper Mage_Cms_Helper_Data */
+        $helper = Mage::helper('cms');
+        $processor = $helper->getBlockTemplateProcessor();
+        $markdown = $processor->filter( $markdown );
+
+        return '<div class="markdown">' . $this->parse($markdown) . '</div>';
     }
 
     protected function isSomeAllowed($aclList)

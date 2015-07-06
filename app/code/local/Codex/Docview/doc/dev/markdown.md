@@ -94,3 +94,13 @@ Die Doppelpunkte geben das Text-Align an
 ## Direktes HTML 
 
 Einfach nutzen :-)
+
+## Magento Template Direktiven
+
+Die Magento Template Direktiven lassen sich genauso wie in statischen Blöcken nutzen.
+
+```
+{ {config path="customer/customeractivation/admin_email"} }
+```
+
+Bitte anstatt `{ {` nur `{{` schreiben (kein Leerzeichen)
