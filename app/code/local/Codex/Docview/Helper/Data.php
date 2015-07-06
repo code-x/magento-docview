@@ -17,10 +17,16 @@ class Codex_Docview_Helper_Data extends Mage_Core_Helper_Abstract
 
             if( file_exists($docDir.DS.$docFile) )
             {
-                $docs[] = array('module' => $moduleName, 'file' => $docFile, 'subdir' => $subdir);
+                $file = file($docDir.DS.$docFile);
+                $docs[] = array('module' => $moduleName, 'file' => $docFile, 'subdir' => $subdir, 'first_line' => $file[0] );
             }
 
         }
+
+        usort($docs, function($a, $b) {
+            return $a['first_line'] - $b['first_line'];
+        });
+
         return $docs;
     }
 
