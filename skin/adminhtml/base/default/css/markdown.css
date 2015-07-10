@@ -3,7 +3,11 @@
 }
 
 .markdown h2 {
-    margin-top: 25px;
+    margin-top: 30px;
+}
+
+.markdown h3 {
+    margin-top: 10px;
 }
 
 .markdown pre {
@@ -13,9 +17,10 @@
     margin-bottom: 15px;
 }
 
-.markdown table{
+.markdown table {
     border: 0px solid black;
     border-spacing: 0px;
+    margin-bottom: 20px;
 }
 
 .markdown table thead tr{
@@ -45,7 +50,11 @@
     padding: 8px;
 }
 
+.markdown ul {
+    margin: 10px 0;
+}
+
 .markdown ul li {
     list-style-type: circle;
-    margin-left: 12px;
+    margin-left: 2em;
 }
