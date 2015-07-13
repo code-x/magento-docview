@@ -2,6 +2,15 @@
 
 class Codex_Docview_Adminhtml_DocviewController extends Mage_Adminhtml_Controller_Action
 {
+    protected function _isAllowed()
+    {
+        if ($this->getRequest()->getActionName() == 'dev') {
+            return Mage::getSingleton('admin/session')->isAllowed('admin/codex_base/codex_docview_dev');
+        } else {
+            return Mage::getSingleton('admin/session')->isAllowed('admin/codex_base/codex_docview');
+        }
+    }
+
     protected function _validateFormKey()
     {
         return true;
