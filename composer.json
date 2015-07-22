@@ -1,6 +1,7 @@
 {
   "name": "code-x/docview",
   "license": "code-x",
+  "type": "magento-module",
   "authors": [
     {
       "name": "code-x",
