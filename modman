@@ -2,3 +2,4 @@ app/code/local/Codex/* app/code/local/Codex/
 app/design/adminhtml/base/default/layout/*    app/design/adminhtml/base/default/layout/
 app/etc/modules/* app/etc/modules/
 skin/adminhtml/base/default/css/* skin/adminhtml/base/default/css/
+skin/adminhtml/base/default/js/* js/markdown/

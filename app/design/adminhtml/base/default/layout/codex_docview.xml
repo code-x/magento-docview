@@ -6,6 +6,9 @@
             <action method="addCss">
                 <stylesheet>css/markdown.css</stylesheet>
             </action>
+            <action method="addJs">
+                <stylesheet>markdown/markdown.js</stylesheet>
+            </action>
         </reference>
     </adminhtml_docview_index>
 
@@ -14,6 +17,9 @@
             <action method="addCss">
                 <stylesheet>css/markdown.css</stylesheet>
             </action>
+            <action method="addJs">
+                <stylesheet>markdown/markdown.js</stylesheet>
+            </action>
         </reference>
     </adminhtml_docview_view>
 
@@ -21,6 +27,9 @@
         <reference name="head">
             <action method="addCss">
                 <stylesheet>css/markdown.css</stylesheet>
+            </action>
+            <action method="addJs">
+                <stylesheet>markdown/markdown.js</stylesheet>
             </action>
         </reference>
     </adminhtml_docview_dev>

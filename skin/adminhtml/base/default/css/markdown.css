@@ -1,13 +1,32 @@
 .markdown {
     margin-bottom: 25px;
+    line-height: 1.6;
+    font-size: 14px;
+    max-width: 520px;
+    color: #333;
+}
+
+.markdown h1, .markdown h2, .markdown h3, .markdown h4 {
+    margin: 20px 0 10px;
+    color: #2f2f2f;
 }
 
 .markdown h2 {
     margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.markdown h2 + h2 {
+    margin-top: 10px;
 }
 
 .markdown h3 {
-    margin-top: 10px;
+    margin-top: 20px;
+    color: #253033
+}
+
+.markdown h4 {
+    color: #494848;
 }
 
 .markdown pre {
@@ -23,11 +42,11 @@
     margin-bottom: 20px;
 }
 
-.markdown table thead tr{
+.markdown table thead tr {
     font-size: 14px;
 }
 
-.markdown table thead tr th{
+.markdown table thead tr th {
     border-bottom: 2px solid black;
     border-top: 1px solid black;
     margin: 0px;
@@ -37,7 +56,7 @@
 
 .markdown table tr {
     color: black;
-    font-size:12px;
+    font-size: 12px;
     background-color: white;
 }
 
@@ -45,7 +64,7 @@
     background-color: #AAAAAA;
 }
 
-.markdown table tr td, th{
+.markdown table tr td, th {
     border-bottom: 1px solid black;
     padding: 8px;
 }
@@ -56,5 +75,25 @@
 
 .markdown ul li {
     list-style-type: circle;
+    margin-left: 2em;
+}
+
+#aside-wrapper {
+    position: fixed;
+    top: 140px;
+    left: 700px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    width: 200px;
+    border-radius: 2px;
+    font-size: 12px;
+}
+#aside-wrapper a {
+    display: block;
+}
+#aside-wrapper .h3 {
+    margin-left: 1em;
+}
+#aside-wrapper .h4 {
     margin-left: 2em;
 }
