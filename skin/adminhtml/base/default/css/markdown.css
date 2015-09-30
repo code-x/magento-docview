@@ -83,17 +83,16 @@
     top: 140px;
     left: 700px;
     border: 1px solid lightgrey;
+    background-color: #fff;
     padding: 10px;
     width: 200px;
     border-radius: 2px;
-    font-size: 12px;
+    font-size: 14px;
 }
 #aside-wrapper a {
     display: block;
 }
 #aside-wrapper .h3 {
     margin-left: 1em;
-}
-#aside-wrapper .h4 {
-    margin-left: 2em;
+    font-size: .85em;
 }
