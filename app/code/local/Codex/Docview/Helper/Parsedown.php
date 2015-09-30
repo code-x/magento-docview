@@ -14,6 +14,9 @@ class Codex_Docview_Helper_Parsedown extends Codex_Docview_Lib_Parsedown
 
         if (substr($href, 0, strlen('magento:')) == 'magento:') {
             $href = Mage::getUrl(substr($href, strlen('magento:')));
+        } elseif (strpos($href,'::') !== false) {
+            $href = Mage::getUrl('*/*/view') . '?' . http_build_query(array('file' => substr($href, strpos($href,'::')+2), 'module' => substr($href, 0, strpos($href,'::')), 'subdir' => $this->subdir ));
+
         } elseif (substr($href, 0, 4) != 'http') {
             $href = Mage::getUrl('*/*/view') . '?' . http_build_query(array('file' => $href, 'module' => $this->moduleName, 'subdir' => $this->subdir ));
         }
