@@ -96,3 +96,34 @@
     margin-left: 1em;
     font-size: .85em;
 }
+.markdown, #aside-wrapper {
+    counter-reset: ebene1;
+}
+
+.markdown h2:before,
+.markdown .h2:before {
+    content: counter(ebene1) " ";
+    counter-increment: ebene1;
+}
+
+.markdown h2,
+.markdown .h2 {
+    counter-reset: ebene2;
+}
+
+.markdown h3:before,
+.markdown .h3:before {
+    content: counter(ebene1) "." counter(ebene2) " ";
+    counter-increment: ebene2;
+}
+
+.markdown h3,
+.markdown .h3 {
+    counter-reset: ebene3;
+}
+
+.markdown h4:before,
+.markdown .h4:before {
+    content: counter(ebene1) "." counter(ebene2) "." counter(ebene3) " ";
+    counter-increment: ebene3;
+}
