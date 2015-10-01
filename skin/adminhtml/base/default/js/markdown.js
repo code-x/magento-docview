@@ -25,8 +25,10 @@ document.observe("dom:loaded", function() {
         var headerHeight = $$('.middle').first().offsetTop; // Hoehe des Headers
         var positionTop = headerHeight - scrollTop + 20;
 
-        if (positionTop > 0) {
+        if (positionTop > 20) {
             $('aside-wrapper').style.top = positionTop+'px';
+        } else {
+            $('aside-wrapper').style.top = '20px';
         }
     });
 
