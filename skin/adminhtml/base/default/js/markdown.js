@@ -20,5 +20,15 @@ document.observe("dom:loaded", function() {
         $('aside-wrapper').appendChild(new_link);
     });
 
+    document.observe('scroll', function(event) {
+        var scrollTop = document.viewport.getScrollOffsets().top; // aktuelle Scroll Position
+        var headerHeight = $$('.middle').first().offsetTop; // Hoehe des Headers
+        var positionTop = headerHeight - scrollTop + 20;
+
+        if (positionTop > 0) {
+            $('aside-wrapper').style.top = positionTop+'px';
+        }
+    });
+
 });
 
